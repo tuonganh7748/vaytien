@@ -19,5 +19,16 @@ function submitProfile() {
   } else {
     document.getElementById("msg").innerText = "Hồ sơ đã được gửi thành công!";
     document.getElementById("msg").className = "success";
+    function openCamera() {
+  const video = document.getElementById("camera");
+  video.style.display = "block";
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(stream => {
+      video.srcObject = stream;
+    })
+    .catch(err => {
+      alert("Không thể mở camera: " + err);
+    });
+}
   }
 }
