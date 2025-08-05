@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ứng dụng vay tiền</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container" id="loginForm">
+    <h2>Đăng nhập</h2>
+    <input type="text" id="username" placeholder="Tên đăng nhập" />
+    <input type="password" id="password" placeholder="Mật khẩu" />
+    <button onclick="login()">Đăng nhập</button>
+    <p id="error" class="error"></p>
+  </div>
+
+  <div class="profile-form" id="profileForm" style="display:none;">
+    <h2>Tạo hồ sơ vay tiền</h2>
+    <input type="text" id="fullname" placeholder="Họ và tên" />
+    <input type="number" id="amount" placeholder="Số tiền cần vay (VNĐ)" />
+    <input type="text" id="idnumber" placeholder="Số CMND/CCCD" />
+    <button onclick="submitProfile()">Gửi hồ sơ</button>
+    <p id="msg" class="success"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
